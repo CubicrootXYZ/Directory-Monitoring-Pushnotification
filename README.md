@@ -33,3 +33,9 @@ $ systemctl start jobname.service
 **Replace MQTT**
 
 You can replace MQTT as enabler/disabler by replacing the mqtt class with any other service you want. Just make sure that there is a mqtt.getStatus() that returns True (enable notifications) or False (disable notifications). You also can just replace the mqtt.getStatus() in the initialization of DirMonitoring-class and when calling DirMonitoring.start() with True to always get notifications. 
+
+## Known Issues
+
+**Could not read/write file/folder**
+
+The user executing the script does need permissions to create a obj folder and a .pkx file in there. Thats used to store the list of known files. Make sure your user is allowed to do. 
