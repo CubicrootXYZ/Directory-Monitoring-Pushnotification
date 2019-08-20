@@ -45,6 +45,14 @@ There is a default cool-down of 5 minutes between notifications. You can change 
 
 The user executing the script does need permissions to create a obj folder and a .pkx file in there. Thats used to store the list of known files. Make sure your user is allowed to do. 
 
+**Systemd job not able to auto-start with error "Start request repeated too quickly"**
+
+Make sure you added a 
+```
+RestartSec=60
+```
+to your .service file. Maybe increase the time. This is need because the script relies on a MQTT connection, connectiing fails until network is availalbe. 
+
 ### Issues related to Motion Eye
 
 **Notifications are comming late**
