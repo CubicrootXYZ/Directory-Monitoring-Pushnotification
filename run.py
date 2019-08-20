@@ -115,7 +115,7 @@ class mqtt():
     def getStatus(self):
         return self.status
 
-#if you do not want to use mqtt make sure that mqtt.Status() in the next lines is replaced with something that returns True (notifcations enabled) or False (notifications disabled)
+#if you do not want to use mqtt make sure that mqtt.getStatus() in the next lines is replaced with something that returns True (notifcations enabled) or False (notifications disabled)
 mqtt = mqtt(mqtt_ip, mqtt_channel)
 
 
